@@ -1,0 +1,10 @@
+# Create a class to remind the user to do a stored task
+class Reminder:
+    def __init__(self, name):
+        self.name = name
+
+    def remind_me_to(self, task):
+        self.task = task
+
+    def remind(self):
+        return f"{self.task}, {self.name}!"
