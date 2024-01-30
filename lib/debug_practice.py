@@ -21,12 +21,12 @@ def encode(text, key):
 
 def decode(encrypted, key):
     cipher = make_cipher(key)
+    print(f'\nTest cipher:\n{cipher}')
 
     plaintext_chars = []
     for i in encrypted:
         plain_char = cipher[65 - ord(i)]
         plaintext_chars.append(plain_char)
-
     return "".join(plaintext_chars)
 
 
@@ -43,4 +43,6 @@ def make_cipher(key):
 
 # When you run this file, these next lines will show you the expected
 # and actual outputs of the functions above.
-print(encode('theswiftfoxjumpedoverthelazydog', 'secretkey'))
+print(f'\nTest output:\n{decode("E", "secretkey")}')
+
+print('\nShould read: t')
